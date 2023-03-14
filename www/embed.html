@@ -1,146 +1,146 @@
 <link rel="stylesheet" href="piwik.css">
 
-<div id="piwik-consent-root"></div>
-
-<template id="piwik-consent-template-cookie-type-analytics">
-  <section class="piwik-consent-modal__section">
-    <h2 class="piwik-consent-heading piwik-consent-modal__heading">
-      Analytics
-    </h2>
-    <div class="piwik-consent-modal__check">
-      <input class="piwik-consent-checkbox" type="checkbox" name="analytics">
-    </div>
-    <p class="piwik-consent-modal__section__description">
-      We will store data in an aggregated form about visitors and their experiences on our website. We use this data to fix bugs and improve the experience for all visitors.
-    </p>
-  </section>
-</template>
-
-<template id="piwik-consent-template-cookie-type-user_feedback">
-  <section class="piwik-consent-modal__section">
-    <h2 class="piwik-consent-heading piwik-consent-modal__heading">
-      User Feedback
-    </h2>
-    <div class="piwik-consent-modal__check">
-      <input class="piwik-consent-checkbox" type="checkbox" name="user_feedback">
-    </div>
-    <p class="piwik-consent-modal__section__description">
-      We will store data in an aggregated form to analyze the performance of our website's user interface. We use this data to improve the site for all visitors.
-    </p>
-  </section>
-</template>
-
-<template id="piwik-consent-template-cookie-type-remarketing">
-  <section class="piwik-consent-modal__section">
-    <h2 class="piwik-consent-heading piwik-consent-modal__heading">
-      Remarketing
-    </h2>
-    <div class="piwik-consent-modal__check">
-      <input class="piwik-consent-checkbox" type="checkbox" name="remarketing">
-    </div>
-    <p class="piwik-consent-modal__section__description">
-      We will store data to show you our advertisements (only ours) on other websites relevant to your interests.
-    </p>
-  </section>
-</template>
-
-<template id="piwik-consent-template-cookie-type-marketing_automation">
-  <section class="piwik-consent-modal__section">
-    <h2 class="piwik-consent-heading piwik-consent-modal__heading">
-      Marketing Automation
-    </h2>
-    <div class="piwik-consent-modal__check">
-      <input class="piwik-consent-checkbox" type="checkbox" name="marketing_automation">
-    </div>
-    <p class="piwik-consent-modal__section__description">
-      We will store data to create marketing campaigns for certain groups of visitors.
-    </p>
-  </section>
-</template>
-
-<template id="piwik-consent-template-cookie-type-ab_testing_and_personalization">
-  <section class="piwik-consent-modal__section">
-    <h2 class="piwik-consent-heading piwik-consent-modal__heading">
-      AB Testing
-    </h2>
-    <div class="piwik-consent-modal__check">
-      <input class="piwik-consent-checkbox" type="checkbox" name="ab_testing_and_personalization">
-    </div>
-    <p class="piwik-consent-modal__section__description">
-      We will create a cookie in your browser to ensure consistency of our A/B tests. A/B tests are small changes displayed to different groups of visitors. We use the data to create a better experience for all visitors. We will also use this cookie to personalize content for you.
-    </p>
-  </section>
-</template>
-
-<template id="piwik-consent-template-cookie-type-conversion_tracking">
-  <section class="piwik-consent-modal__section">
-    <h2 class="piwik-consent-heading piwik-consent-modal__heading">
-      Conversion Tracking
-    </h2>
-    <div class="piwik-consent-modal__check">
-      <input class="piwik-consent-checkbox" type="checkbox" name="conversion_tracking">
-    </div>
-    <p class="piwik-consent-modal__section__description">
-      We will store data about when you complete certain actions on our website to understand better how you use it. We use this data to improve your experience with our site.
-    </p>
-  </section>
-</template>
-
-<template id="piwik-consent-template-consent-banner">
-  <div class="piwik-consent-container piwik-consent-banner" id="piwik-consent-banner">
-    <div class="piwik-consent-banner__text">
-      <h1 class="piwik-consent-heading piwik-consent-banner__heading">
-        Some features are disabled, Accept cookies to enable.
-      </h1>
-      <p>
-        Cookies are used to help provide a better experience and allows us to learn how we can improve our website and application. Read more about <a href="https://colony.io/terms-of-service#cookies" target="_blank" rel="noopener noreferrer">how we use cookies</a>.
+<div id="piwik-consent-root">
+  <template id="piwik-consent-template-cookie-type-analytics">
+    <section class="piwik-consent-modal__section">
+      <h2 class="piwik-consent-heading piwik-consent-modal__heading">
+        Analytics
+      </h2>
+      <div class="piwik-consent-modal__check">
+        <input class="piwik-consent-checkbox" type="checkbox" name="analytics">
+      </div>
+      <p class="piwik-consent-modal__section__description">
+        We will store data in an aggregated form about visitors and their experiences on our website. We use this data to fix bugs and improve the experience for all visitors.
       </p>
-    </div>
-    <div class="piwik-consent-banner__buttons">
-      <button class="piwik-consent-button piwik-consent-button--secondary" id="piwik-consent-banner-button-configure">
-        Configure
-      </button>
-      <button class="piwik-consent-button piwik-consent-button--primary" id="piwik-consent-banner-button-accept">
-        Accept
-      </button>
-    </div>
-  </div>
-</template>
+    </section>
+  </template>
 
-<template id="piwik-consent-template-consent-modal">
-  <div class="piwik-consent-container piwik-consent-modal" id="piwik-consent-modal">
-    <header class="piwik-consent-modal__header">
-      <h1 class="piwik-consent-heading piwik-consent-modal__heading">
-        Privacy preferences
-      </h1>
-      <button class="piwik-consent-close-button" id="piwik-consent-modal-button-close">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <g>
-                <path d="M18.717 6.697l-1.414-1.414-5.303 5.303-5.303-5.303-1.414 1.414 5.303 5.303-5.303 5.303 1.414 1.414 5.303-5.303 5.303 5.303 1.414-1.414-5.303-5.303z"/>
-            </g>
-        </svg>
-      </button>
-    </header>
-    <article class="piwik-consent-modal__content" id="piwik-consent-modal-cookies">
-      <section class="piwik-consent-modal__section">
-        <h2 class="piwik-consent-heading piwik-consent-modal__heading">
-          Necessary Cookies
-        </h2>
-        <p class="piwik-consent-modal__always-active">Always active</p>
-        <p class="piwik-consent-modal__section__description">
-          Necessary Cookies are required to ensure the app works properly for you. For example, cookies that allow you to access secure areas that require your registration and set your privacy preferences. They are not able to be disabled.
+  <template id="piwik-consent-template-cookie-type-user_feedback">
+    <section class="piwik-consent-modal__section">
+      <h2 class="piwik-consent-heading piwik-consent-modal__heading">
+        User Feedback
+      </h2>
+      <div class="piwik-consent-modal__check">
+        <input class="piwik-consent-checkbox" type="checkbox" name="user_feedback">
+      </div>
+      <p class="piwik-consent-modal__section__description">
+        We will store data in an aggregated form to analyze the performance of our website's user interface. We use this data to improve the site for all visitors.
+      </p>
+    </section>
+  </template>
+
+  <template id="piwik-consent-template-cookie-type-remarketing">
+    <section class="piwik-consent-modal__section">
+      <h2 class="piwik-consent-heading piwik-consent-modal__heading">
+        Remarketing
+      </h2>
+      <div class="piwik-consent-modal__check">
+        <input class="piwik-consent-checkbox" type="checkbox" name="remarketing">
+      </div>
+      <p class="piwik-consent-modal__section__description">
+        We will store data to show you our advertisements (only ours) on other websites relevant to your interests.
+      </p>
+    </section>
+  </template>
+
+  <template id="piwik-consent-template-cookie-type-marketing_automation">
+    <section class="piwik-consent-modal__section">
+      <h2 class="piwik-consent-heading piwik-consent-modal__heading">
+        Marketing Automation
+      </h2>
+      <div class="piwik-consent-modal__check">
+        <input class="piwik-consent-checkbox" type="checkbox" name="marketing_automation">
+      </div>
+      <p class="piwik-consent-modal__section__description">
+        We will store data to create marketing campaigns for certain groups of visitors.
+      </p>
+    </section>
+  </template>
+
+  <template id="piwik-consent-template-cookie-type-ab_testing_and_personalization">
+    <section class="piwik-consent-modal__section">
+      <h2 class="piwik-consent-heading piwik-consent-modal__heading">
+        AB Testing
+      </h2>
+      <div class="piwik-consent-modal__check">
+        <input class="piwik-consent-checkbox" type="checkbox" name="ab_testing_and_personalization">
+      </div>
+      <p class="piwik-consent-modal__section__description">
+        We will create a cookie in your browser to ensure consistency of our A/B tests. A/B tests are small changes displayed to different groups of visitors. We use the data to create a better experience for all visitors. We will also use this cookie to personalize content for you.
+      </p>
+    </section>
+  </template>
+
+  <template id="piwik-consent-template-cookie-type-conversion_tracking">
+    <section class="piwik-consent-modal__section">
+      <h2 class="piwik-consent-heading piwik-consent-modal__heading">
+        Conversion Tracking
+      </h2>
+      <div class="piwik-consent-modal__check">
+        <input class="piwik-consent-checkbox" type="checkbox" name="conversion_tracking">
+      </div>
+      <p class="piwik-consent-modal__section__description">
+        We will store data about when you complete certain actions on our website to understand better how you use it. We use this data to improve your experience with our site.
+      </p>
+    </section>
+  </template>
+
+  <template id="piwik-consent-template-consent-banner">
+    <div class="piwik-consent-container piwik-consent-banner" id="piwik-consent-banner">
+      <div class="piwik-consent-banner__text">
+        <h1 class="piwik-consent-heading piwik-consent-banner__heading">
+          Some features are disabled, Accept cookies to enable.
+        </h1>
+        <p>
+          Cookies are used to help provide a better experience and allows us to learn how we can improve our website and application. Read more about <a href="https://colony.io/terms-of-service#cookies" target="_blank" rel="noopener noreferrer">how we use cookies</a>.
         </p>
-      </section>
-    </article>
-    <footer class="piwik-consent-modal__footer">
-      <button class="piwik-consent-button piwik-consent-button--secondary" id="piwik-consent-modal-button-save">
-        Save & exit
-      </button>
-      <button class="piwik-consent-button piwik-consent-button--primary" id="piwik-consent-modal-button-accept">
-        Accept all
-      </button>
-    </footer>
-  </div>
-</template>
+      </div>
+      <div class="piwik-consent-banner__buttons">
+        <button class="piwik-consent-button piwik-consent-button--secondary" id="piwik-consent-banner-button-configure">
+          Configure
+        </button>
+        <button class="piwik-consent-button piwik-consent-button--primary" id="piwik-consent-banner-button-accept">
+          Accept
+        </button>
+      </div>
+    </div>
+  </template>
+
+  <template id="piwik-consent-template-consent-modal">
+    <div class="piwik-consent-container piwik-consent-modal" id="piwik-consent-modal">
+      <header class="piwik-consent-modal__header">
+        <h1 class="piwik-consent-heading piwik-consent-modal__heading">
+          Privacy preferences
+        </h1>
+        <button class="piwik-consent-close-button" id="piwik-consent-modal-button-close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <g>
+                  <path d="M18.717 6.697l-1.414-1.414-5.303 5.303-5.303-5.303-1.414 1.414 5.303 5.303-5.303 5.303 1.414 1.414 5.303-5.303 5.303 5.303 1.414-1.414-5.303-5.303z"/>
+              </g>
+          </svg>
+        </button>
+      </header>
+      <article class="piwik-consent-modal__content" id="piwik-consent-modal-cookies">
+        <section class="piwik-consent-modal__section">
+          <h2 class="piwik-consent-heading piwik-consent-modal__heading">
+            Necessary Cookies
+          </h2>
+          <p class="piwik-consent-modal__always-active">Always active</p>
+          <p class="piwik-consent-modal__section__description">
+            Necessary Cookies are required to ensure the app works properly for you. For example, cookies that allow you to access secure areas that require your registration and set your privacy preferences. They are not able to be disabled.
+          </p>
+        </section>
+      </article>
+      <footer class="piwik-consent-modal__footer">
+        <button class="piwik-consent-button piwik-consent-button--secondary" id="piwik-consent-modal-button-save">
+          Save & exit
+        </button>
+        <button class="piwik-consent-button piwik-consent-button--primary" id="piwik-consent-modal-button-accept">
+          Accept all
+        </button>
+      </footer>
+    </div>
+  </template>
+</div>
 
 <script type="text/javascript" src="../dist/index.js" async></script>
