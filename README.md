@@ -2,7 +2,7 @@ A pretty Piwik Consent Manager
 
 # Developing
 
-1. Clone this newly created repository
+1. Clone this repository
 ```bash
 git clone https://github.com/JoinColony/consent-banner
 ```
