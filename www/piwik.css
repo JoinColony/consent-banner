@@ -24,6 +24,7 @@
     font-weight: 400;
     font-size: 14px;
     letter-spacing: 0.1px;
+    color: var(--piwik-color-navy);
     /* Stupid but we improve that later */
     z-index: 10000 !important;
 }
@@ -33,6 +34,11 @@
 }
 
 .piwik-consent-container p {
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
     margin: 0;
 }
 
@@ -89,6 +95,7 @@ input.piwik-consent-checkbox {
     background-color: #ffffff; border: 1px solid #D9DADC;
     border-radius: 50px; box-shadow: inset -20px 0 0 0 #ffffff;
     transition-duration: 200ms;
+    cursor: pointer;
 }
 
 input.piwik-consent-checkbox:after {
@@ -115,6 +122,8 @@ input.piwik-consent-checkbox:checked:after {
     font-weight: 700;
     letter-spacing: 0.25px;
     margin: 0;
+    font-family: inherit;
+    color: inherit;
 }
 
 .piwik-consent-banner {
@@ -129,6 +138,7 @@ input.piwik-consent-checkbox:checked:after {
 
 h1.piwik-consent-banner__heading {
     font-size: 14px;
+    line-height: 18px;
     margin-bottom: 15px;
 }
 
@@ -173,10 +183,12 @@ h1.piwik-consent-banner__heading {
 
 h1.piwik-consent-modal__heading {
     font-size: 18px;
+    line-height: 24px;
 }
 
 h2.piwik-consent-modal__heading {
     font-size: 14px;
+    line-height: 18px;
     margin-bottom: 14px;
 }
 
@@ -194,7 +206,7 @@ h2.piwik-consent-modal__heading {
     border-bottom: 1px solid var(--piwik-color-grey);
 }
 
-.piwik-consent-modal__always-active {
+p.piwik-consent-modal__always-active {
     color: var(--piwik-color-blue);
     font-weight: 700;
     font-size: 11px;
