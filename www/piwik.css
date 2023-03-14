@@ -1,0 +1,365 @@
+:root {
+  --piwik-color-white: white;
+  --piwik-color-navy: #00284B;
+  --piwik-color-blue: #289BDC;
+  --piwik-color-grey: #C2CCCC;
+  --piwik-color-light-grey: #F5F5F5;
+}
+
+.piwik-hidden {
+    display: none !important;
+}
+
+.piwik-consent-container {
+    position: fixed;
+    width: 90%;
+    max-width: 820px;
+    box-sizing: border-box;
+    background: var(--piwik-color-white);
+    border-radius: 4px;
+    box-shadow: 0px 2px 11px rgba(62, 118, 244, 0.14);
+    font-family: 'Avenir next', sans-serif;
+    font-style: normal;
+    line-height: 18px;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    /* Stupid but we improve that later */
+    z-index: 10000 !important;
+}
+
+.piwik-consent-container * {
+    box-sizing: border-box;
+}
+
+.piwik-consent-container p {
+    margin: 0;
+}
+
+.piwik-consent-container a {
+    color: inherit;
+}
+
+.piwik-consent-close-button {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+.piwik-consent-close-button path {
+    fill: var(--piwik-color-grey);
+}
+
+.piwik-consent-button {
+    display: inline-block;
+    padding: 15px 20px;
+    cursor: pointer;
+    background: transparent;
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+    border: 1px solid;
+    border-radius: 22px;
+}
+
+.piwik-consent-button--primary {
+    color: var(--piwik-color-white);
+    border-color: var(--piwik-color-blue);
+    background: var(--piwik-color-blue);
+}
+
+.piwik-consent-button--secondary {
+    color: var(--piwik-color-navy);
+    border-color: var(--piwik-color-navy);
+}
+
+.piwik-consent-button + .piwik-consent-button {
+    margin-left: 20px;
+}
+
+input.piwik-consent-checkbox {
+    position: relative;
+    appearance: none; outline: none;
+    width: 32px; height: 16px;
+    background-color: #ffffff; border: 1px solid #D9DADC;
+    border-radius: 50px; box-shadow: inset -20px 0 0 0 #ffffff;
+    transition-duration: 200ms;
+}
+
+input.piwik-consent-checkbox:after {
+    content: '';
+    position: absolute;
+    top: 1px; left: 1px;
+    width: 12px; height: 12px;
+    background-color: var(--piwik-color-grey);
+    border-radius: 50%; box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+}
+
+input.piwik-consent-checkbox:checked {
+    border-color: var(--piwik-color-grey);
+    box-shadow: inset 16px 0 0 0 var(--piwik-color-blue);
+}
+
+input.piwik-consent-checkbox:checked:after {
+    background-color: transparent;
+    left: 16px;
+    box-shadow: -2px 4px 3px rgba(0,0,0,0.05);
+}
+
+.piwik-consent-heading {
+    font-weight: 700;
+    letter-spacing: 0.25px;
+    margin: 0;
+}
+
+.piwik-consent-banner {
+    display: flex;
+    padding: 30px 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h1.piwik-consent-banner__heading {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.piwik-consent-banner__buttons {
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (min-width: 500px) {
+    .piwik-consent-banner {
+        flex-wrap: nowrap;
+    }
+
+    .piwik-consent-banner__buttons {
+        flex: 1;
+    }
+}
+
+.piwik-consent-modal {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 100vh;
+}
+
+.piwik-consent-modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px 0;
+    margin-bottom: 20px;
+}
+
+.piwik-consent-modal__header .piwik-consent-close-button {
+    flex: 0 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+h1.piwik-consent-modal__heading {
+    font-size: 18px;
+}
+
+h2.piwik-consent-modal__heading {
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.piwik-consent-modal__content {
+    padding: 0 20px;
+}
+
+.piwik-consent-modal__section {
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    padding: 20px 0;
+}
+
+.piwik-consent-modal__section:not(:last-child) {
+    border-bottom: 1px solid var(--piwik-color-grey);
+}
+
+.piwik-consent-modal__always-active {
+    color: var(--piwik-color-blue);
+    font-weight: 700;
+    font-size: 11px;
+    text-align: right;
+}
+
+.piwik-consent-modal__check {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.piwik-consent-modal__footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: var(--piwik-color-light-grey);
+}
+
+.PiwikPROConsentForm-hidden {
+    display: none;
+}
+
+.PiwikPROConsentForm-container {
+    font-family: 'Avenir next',sans-serif;
+}
+
+.PiwikPROConsentForm-content {
+    display: flex;
+    flex-direction: column;
+    border: 1px dashed #cccccc;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    margin: 0;
+    width: 100%;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px;
+    max-height: 80vh;
+    overflow: auto;
+}
+
+.PiwikPROConsentForm-row-top {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.PiwikPROConsentForm-row-middle {
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.PiwikPROConsentForm-row-bottom {
+
+}
+
+.PiwikPROConsentForm-header {
+    font-weight: bold;
+    font-size: 22px;
+    flex-grow: 1;
+}
+
+.PiwikPROConsentForm-close-button {
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+    font-size: 0;
+}
+
+.PiwikPROConsentForm-close-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.PiwikPROConsentForm-intro {
+    text-align: justify;
+}
+
+.PiwikPROConsentForm-consent-types {
+    display: block;
+}
+
+.PiwikPROConsentForm-consent-types ul {
+    margin: 10px 0 10px -10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.PiwikPROConsentForm-consent-types ul li {
+    padding: 0;
+    margin: 0 30px 0 0;
+}
+
+.PiwikPROConsentForm-toggle-details {
+    color: #107EF1;
+}
+
+.PiwikPROConsentForm-consents {
+    border: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.PiwikPROConsentForm-consent-item {
+    padding: 5px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.PiwikPROConsentForm-consent-item-type {
+    font-weight: bold;
+}
+
+.PiwikPROConsentForm-consent-item-description {
+
+}
+
+.PiwikPROConsentForm-consent-checkbox {
+    margin: 5px;
+}
+
+.PiwikPROConsentForm-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+}
+
+.PiwikPROConsentForm-buttons button {
+    margin: 8px;
+    cursor: pointer;
+}
+
+.PiwikPROConsentForm-save-button {
+    color: #131313;
+    border-radius: 2px;
+    border: 1px solid #cccccc;
+    background-color: #eeeeee;
+    padding: 7px;
+    font-size: 14px;
+    line-height: 17px;
+    min-width: 130px;
+}
+
+.PiwikPROConsentForm-agree-to-all-button {
+    color: #ffffff;
+    border-radius: 2px;
+    border: 1px solid #0B4BB3;
+    background-color: #2775F2;
+    padding: 7px;
+    font-size: 14px;
+    line-height: 17px;
+    min-width: 130px;
+}
+
+.PiwikPROConsentForm-reject-all-button {
+    color: #ffffff;
+    border-radius: 2px;
+    border: 1px solid #0B4BB3;
+    background-color: #2775F2;
+    padding: 7px;
+    font-size: 14px;
+    line-height: 17px;
+    min-width: 130px;
+}
+

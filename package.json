@@ -1,11 +1,10 @@
 {
-  "name": "discord-gating-bot-frontend",
+  "name": "colony-piwik-consent-banner",
   "version": "1.0.0",
-  "description": "The frontend for the infamouse discord-gating-bot",
-  "main": "dist/index.ts",
+  "description": "Because the default Piwik PRO banner is 🤮",
   "scripts": {
     "serve": "esbuild --bundle --outdir=www --servedir=www src/index.js",
-    "build": "esbuild --bundle src/index.ts --minify --outfile=dist/index.js && cpy --flat www/index.html dist"
+    "build": "esbuild --bundle src/index.js --minify --outfile=dist/index.js && cpy --flat www/*.* dist"
   },
   "keywords": [
     "colony",
@@ -13,13 +12,9 @@
     "web3"
   ],
   "author": "Christian Maniewski <chris@colony.io>",
-  "license": "GPL-3.0-only",
+  "license": "MIT",
   "devDependencies": {
     "cpy-cli": "^4.1.0",
     "esbuild": "^0.17.8"
-  },
-  "dependencies": {
-    "ethers": "^5.7.2",
-    "@colony/sdk": "^1.3.2"
   }
 }

@@ -4,6 +4,132 @@
     <title>Simple dApp</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript">
+      (function(window, document, dataLayerName, id) {
+      window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
+      function stgCreateCookie(a,b,c){var d="";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d="; expires="+e.toUTCString()}document.cookie=a+"="+b+d+"; path=/"}
+      var isStgDebug=(window.location.href.match("stg_debug")||document.cookie.match("stg_debug"))&&!window.location.href.match("stg_disable_debug");stgCreateCookie("stg_debug",isStgDebug?1:"",isStgDebug?14:-1);
+      var qP=[];dataLayerName!=="dataLayer"&&qP.push("data_layer_name="+dataLayerName),isStgDebug&&qP.push("stg_debug");var qPString=qP.length>0?("?"+qP.join("&")):"";
+      tags.async=!0,tags.src="https://colony.containers.piwik.pro/"+id+".js"+qPString,scripts.parentNode.insertBefore(tags,scripts);
+      !function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
+      })(window, document, 'dataLayer', '3129d720-d2cc-4d32-a559-fb631820889f');
+    </script>
+
+    <link rel="stylesheet" href="piwik.css">
+
+    <div id="piwik-consent-root" />
+
+    <template id="piwik-consent-template-cookie-type-analytics">
+      <section class="piwik-consent-modal__section">
+        <h2 class="piwik-consent-heading piwik-consent-modal__heading">
+          Analytics
+        </h2>
+        <div class="piwik-consent-modal__check">
+          <input class="piwik-consent-checkbox" type="checkbox">
+        </div>
+        <p class="piwik-consent-modal__section__description">
+          We will store data in an aggregated form about visitors and their experiences on our website. We use this data to fix bugs and improve the experience for all visitors.
+        </p>
+      </section>
+    </template>
+
+    <template id="piwik-consent-template-consent-banner">
+      <div class="piwik-consent-container piwik-consent-banner" id="piwik-consent-banner">
+        <div class="piwik-consent-banner__text">
+          <h1 class="piwik-consent-heading piwik-consent-banner__heading">
+            Some features are disabled, Accept cookies to enable.
+          </h1>
+          <p>
+            Cookies are used to help provide a better experience and allows us to learn how we can improve our website and application. Read more about <a href="#" target="_blank" rel="noopener noreferrer">how we use cookies</a>.
+          </p>
+        </div>
+        <div class="piwik-consent-banner__buttons">
+          <button class="piwik-consent-button piwik-consent-button--secondary" id="piwik-consent-banner-button-configure">
+            Configure
+          </button>
+          <button class="piwik-consent-button piwik-consent-button--primary" id="piwik-consent-banner-button-accept">
+            Accept
+          </button>
+        </div>
+      </div>
+    </template>
+
+    <template id="piwik-consent-template-consent-modal">
+      <div class="piwik-consent-container piwik-consent-modal" id="piwik-consent-modal">
+          <header class="piwik-consent-modal__header">
+            <h1 class="piwik-consent-heading piwik-consent-modal__heading">
+              Privacy preferences
+            </h1>
+            <button class="piwik-consent-close-button" id="piwik-consent-modal-button-close">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <g>
+                      <path d="M18.717 6.697l-1.414-1.414-5.303 5.303-5.303-5.303-1.414 1.414 5.303 5.303-5.303 5.303 1.414 1.414 5.303-5.303 5.303 5.303 1.414-1.414-5.303-5.303z"/>
+                  </g>
+              </svg>
+            </button>
+          </header>
+          <article class="piwik-consent-modal__content" id="piwik-consent-modal-cookies">
+            <section class="piwik-consent-modal__section">
+              <h2 class="piwik-consent-heading piwik-consent-modal__heading">
+                Necessary Cookies
+              </h2>
+              <p class="piwik-consent-modal__always-active">Always active</p>
+              <p class="piwik-consent-modal__section__description">
+                Necessary Cookies are required to ensure the app works properly for you. For example, cookies that allow you to access secure areas that require your registration and set your privacy preferences. They are not able to be disabled.
+              </p>
+            </section>
+          </article>
+          <footer class="piwik-consent-modal__footer">
+            <button class="piwik-consent-button piwik-consent-button--secondary" id="piwik-consent-modal-button-save">
+              Save & exit
+            </button>
+            <button class="piwik-consent-button piwik-consent-button--primary" id="piwik-consent-modal-button-accept">
+              Accept all
+            </button>
+          </footer>
+      </div>
+    </template>
+
+
+    <!-- <div id="PiwikPROConsentForm-container" class="PiwikPROConsentForm-container PiwikPROConsentForm-hidden"> -->
+    <!--     <div id="PiwikPROConsentForm-container-inner" class="PiwikPROConsentForm-container-inner"> -->
+    <!--         <div id="PiwikPROConsentForm-content" class="PiwikPROConsentForm-content"> -->
+    <!--             <div class="PiwikPROConsentForm-row-top"> -->
+    <!--                 <div class="PiwikPROConsentForm-header">Privacy settings</div> -->
+    <!--                 <button id="PiwikPROConsentForm-close-consent-form" class="PiwikPROConsentForm-close-button"> -->
+    <!--                 </button> -->
+    <!--             </div> -->
+    <!--             <div class="PiwikPROConsentForm-row-middle"> -->
+    <!--                 <p class="PiwikPROConsentForm-intro"> -->
+    <!--                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus leo elit, pulvinar non sagittis ac, -->
+    <!--                     iaculis id sapien. Phasellus eros ipsum, molestie in malesuada nec, eleifend non tellus. Aliquam -->
+    <!--                     aliquam -->
+    <!--                     placerat turpis, et commodo lorem tempus sit amet. Curabitur venenatis ex quis dolor pretium, nec -->
+    <!--                     pharetra tellus cursus. More in <a href="#">privacy policy</a>. -->
+    <!--                 </p> -->
+    <!--                 <a href="#" id="PiwikPROConsentForm-toggle-details" class="PiwikPROConsentForm-toggle-details"> -->
+    <!--                     Toggle details -->
+    <!--                 </a> -->
+    <!--                 <div id="PiwikPROConsentForm-consent-types" class="PiwikPROConsentForm-consent-types"></div> -->
+    <!--                 <div id="PiwikPROConsentForm-consents" -->
+    <!--                      class="PiwikPROConsentForm-consents PiwikPROConsentForm-hidden"></div> -->
+    <!--             </div> -->
+    <!--             <div class="PiwikPROConsentForm-row-bottom"> -->
+    <!--                 <div class="PiwikPROConsentForm-buttons"> -->
+    <!--                     <button id="PiwikPROConsentForm-save" class="PiwikPROConsentForm-save-button"> -->
+    <!--                         Save -->
+    <!--                     </button> -->
+    <!--                     <button id="PiwikPROConsentForm-agree-to-all" class="PiwikPROConsentForm-agree-to-all-button"> -->
+    <!--                         Agree to all -->
+    <!--                     </button> -->
+    <!--                     <button id="PiwikPROConsentForm-reject-all" class="PiwikPROConsentForm-reject-all-button"> -->
+    <!--                         Reject all -->
+    <!--                     </button> -->
+    <!--                 </div> -->
+    <!--             </div> -->
+    <!--         </div> -->
+    <!--     </div> -->
+    <!-- </div> -->
     <script src="index.js" async></script>
   </head>
   <body>
