@@ -4,7 +4,7 @@
   "description": "Because the default Piwik PRO banner is 🤮",
   "scripts": {
     "serve": "esbuild --bundle --outdir=www --servedir=www src/index.js",
-    "build": "esbuild --bundle src/index.js --minify --outfile=dist/index.js && cpy --flat www/*.* dist"
+    "build": "esbuild --bundle src/index.js --minify --outfile=dist/index.js && html-inline-external --minify --src www/embed.html --dest dist/embed.html"
   },
   "keywords": [
     "colony",
@@ -14,7 +14,7 @@
   "author": "Christian Maniewski <chris@colony.io>",
   "license": "MIT",
   "devDependencies": {
-    "cpy-cli": "^4.1.0",
-    "esbuild": "^0.17.8"
+    "esbuild": "^0.17.8",
+    "html-inline-external": "^1.0.10"
   }
 }
